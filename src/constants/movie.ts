@@ -1,0 +1,31 @@
+export const genres = [
+  { name: 'Action', value: 'action' },
+  { name: 'Adventure', value: 'adventure' },
+  { name: 'Animation', value: 'animation' },
+  { name: 'Comedy', value: 'comedy' },
+  { name: 'Crime', value: 'crime' },
+  { name: 'Documentary', value: 'documentary' },
+  { name: 'Drama', value: 'drama' },
+  { name: 'Family', value: 'family' },
+  { name: 'Fantasy', value: 'fantasy' },
+  { name: 'History', value: 'history' },
+  { name: 'Horror', value: 'horror' },
+  { name: 'Music', value: 'music' },
+  { name: 'Mystery', value: 'mystery' },
+  { name: 'Romance', value: 'romance' },
+  { name: 'Science Fiction', value: 'sci-fi' },
+  { name: 'Thriller', value: 'thriller' },
+  { name: 'War', value: 'war' },
+  { name: 'Western', value: 'western' },
+  { name: 'N/A', value: 'n/a' },
+];
+
+export const ratings = [
+  { name: 'G - General Audiences', value: 'G' },
+  { name: 'PG - Parental Guidance Suggested', value: 'PG' },
+  { name: 'PG-13 - Parents Strongly Cautioned', value: 'PG-13' },
+  { name: 'R - Restricted', value: 'R' },
+  { name: 'NC-17 - Adults Only', value: 'NC-17' },
+  { name: 'N/A', value: 'N/A' },
+  { name: 'Not rated', value: 'Not rated' },
+];
