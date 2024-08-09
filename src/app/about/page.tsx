@@ -62,6 +62,10 @@ export default function About() {
             </p>
           </div>
 
+          <p className="mb-4">
+            - Custom domain with <span className="text-primary underline">SSL</span>
+          </p>
+
           <div className="mb-4">
             <p>
               - Full <span className="text-primary underline">CI-CD</span> pipeline on GitHub

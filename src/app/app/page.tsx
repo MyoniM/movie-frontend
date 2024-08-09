@@ -45,9 +45,9 @@ export default function Home() {
   const debouncedSetSearchTerm = debounce<any>(setSearchTerm, 500);
 
   return (
-    <div className="text-center w-full h-[calc(94vh)] px-10 py-20">
+    <div className="text-center w-full h-[calc(92vh)] px-10 py-20">
       <Head>
-        <title>My page title</title>
+        <title>Movies</title>
       </Head>
 
       <div className="mb-6 flex flex-wrap gap-2 justify-between items-center">
@@ -110,7 +110,7 @@ export default function Home() {
           <div>
             <Loading />
 
-            <h1 className="text-5xl mb-6">Your movie list is empty</h1>
+            <h1 className="text-3xl mb-6">Your movie list is empty</h1>
 
             <Link href="/app/add-movie">
               <Button>Add a new movie</Button>
