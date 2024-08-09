@@ -30,11 +30,11 @@ export default function RootLayout({
         <head>
           <title>Movies</title>
         </head>
-        
+
         <body className={inter.className}>
           <Provider store={store}>
             <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange>
-              <main>{children}</main>
+              <main className="mx-auto max-w-6xl">{children}</main>
               <Toaster />
             </ThemeProvider>
           </Provider>

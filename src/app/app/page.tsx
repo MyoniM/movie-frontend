@@ -45,12 +45,12 @@ export default function Home() {
   const debouncedSetSearchTerm = debounce<any>(setSearchTerm, 500);
 
   return (
-    <div className="text-center w-full h-[calc(94vh)] p-10 md:p-20">
+    <div className="text-center w-full h-[calc(94vh)] px-10 py-20">
       <Head>
         <title>My page title</title>
       </Head>
 
-      <div className="mb-6 flex gap-2 justify-between items-center">
+      <div className="mb-6 flex flex-wrap gap-2 justify-between items-center">
         <div className="flex items-center gap-2">
           <h1 className="text-2xl">My movies</h1>
 
@@ -59,7 +59,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-wrap gap-2 items-center">
           {isFetchingMovie && (
             <div className="flex gap-1">
               <Loader size={14} className={'animate-spin text-primary'} />
@@ -80,7 +80,7 @@ export default function Home() {
           </Button>
 
           <Input
-            className="w-60"
+            className="w-full sm:w-60"
             placeholder="Search Movie"
             onChange={(e) => {
               debouncedSetSearchTerm(e.target.value);
@@ -88,7 +88,7 @@ export default function Home() {
           />
 
           <Select onValueChange={(v) => setGenre(v)} value={genre}>
-            <SelectTrigger>
+            <SelectTrigger className="w-full sm:w-60">
               <SelectValue placeholder="Genre" />
             </SelectTrigger>
 
