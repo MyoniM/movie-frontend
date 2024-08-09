@@ -8,11 +8,11 @@ import ProfileDropdown from './profile-dropdown';
 
 export default function NavBar() {
   return (
-    <header className="flex justify-between items-center gap-4 p-4">
+    <header className="flex justify-between items-center gap-4 py-4 px-8">
       <Link href="/" className="flex items-center gap-2 font-semibold">
         <div className="flex gap-2 items-center">
           <Loading height="30" />
-          <p className="text-primary">MOVIES</p>
+          <p className="text-primary">Movies</p>
         </div>
       </Link>
 

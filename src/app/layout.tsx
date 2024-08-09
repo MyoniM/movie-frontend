@@ -3,7 +3,7 @@
 import './globals.css';
 
 import { useEffect } from 'react';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 import { Provider } from 'react-redux';
 
@@ -13,7 +13,7 @@ import { fetchUser } from '@/utils/auth';
 import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 export default function RootLayout({
   children,
@@ -31,7 +31,7 @@ export default function RootLayout({
           <title>Movies</title>
         </head>
 
-        <body className={inter.className}>
+        <body className={poppins.className}>
           <Provider store={store}>
             <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange>
               <main className="mx-auto max-w-6xl">{children}</main>
