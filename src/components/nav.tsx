@@ -8,7 +8,7 @@ import ProfileDropdown from './profile-dropdown';
 
 export default function NavBar() {
   return (
-    <header className="flex justify-between items-center gap-4 py-4 px-8">
+    <header className="flex flex-wrap justify-between items-center gap-4 py-4 px-2 md:px-8">
       <Link href="/" className="flex items-center gap-2 font-semibold">
         <div className="flex gap-2 items-center">
           <Loading height="30" />
@@ -22,7 +22,7 @@ export default function NavBar() {
           <a
             href="#"
             title="Get quote now"
-            className="relative inline-flex items-center justify-center px-8 py-2 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+            className="text-nowrap relative inline-flex items-center justify-center px-8 py-2 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
             role="button"
           >
             About the App
