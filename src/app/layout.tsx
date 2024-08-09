@@ -33,7 +33,7 @@ export default function RootLayout({
         
         <body className={inter.className}>
           <Provider store={store}>
-            <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
+            <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange>
               <main>{children}</main>
               <Toaster />
             </ThemeProvider>

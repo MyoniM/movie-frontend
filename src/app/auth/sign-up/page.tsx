@@ -16,8 +16,8 @@ import { CardContent, CardDescription, CardHeader, CardTitle } from '@/component
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 
 const signInSchema = z.object({
-  email: z.string({ required_error: 'Invalid email address' }),
-  password: z.string({ required_error: 'Password is required' }),
+  email: z.string({ required_error: 'Email is required' }).min(1, 'Email is required'),
+  password: z.string({ required_error: 'Password is required' }).min(1, 'Password is required'),
 });
 
 export default function SignIn() {
@@ -28,7 +28,6 @@ export default function SignIn() {
 
   const form = useForm<z.infer<typeof signInSchema>>({
     resolver: zodResolver(signInSchema),
-    defaultValues: { email: '', password: '' },
   });
 
   async function onSubmit(values: z.infer<typeof signInSchema>) {
@@ -39,8 +38,11 @@ export default function SignIn() {
 
       router.replace('/auth/sign-in');
     } catch (error: any) {
-      if (error?.data.length > 0) toast({ title: 'Error', description: error?.data[0].message, variant: 'destructive' });
-      else toast({ title: 'Error', description: 'Something went wrong!', variant: 'destructive' });
+      if (error?.data.length > 0) {
+        for (const e of error?.data) {
+          toast({ title: 'Error', description: e.error, variant: 'destructive' });
+        }
+      } else toast({ title: 'Error', description: 'Something went wrong!', variant: 'destructive' });
     }
   }
 
