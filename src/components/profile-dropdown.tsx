@@ -1,30 +1,24 @@
 'use client';
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-
+import { ChevronDown, LogOut } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ChevronDown, LogOut, Settings } from 'lucide-react';
 
 import { useToast } from './ui/use-toast';
-
 import { logOut, selectCurrentUser } from '@/state/features/auth/authSlice';
 
 import {
   DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuSeparator,
 } from './ui/dropdown-menu';
 
 import { Button } from './ui/button';
 import { Avatar, AvatarFallback } from './ui/avatar';
 
 export default function ProfileDropdown() {
-  const router = useRouter();
   const { toast } = useToast();
   const dispatch = useDispatch();
 
@@ -32,7 +26,7 @@ export default function ProfileDropdown() {
 
   const handleLogout = () => {
     dispatch(logOut());
-    router.replace('/auth/sign-in');
+    window.location.reload();
 
     toast({ title: 'Success', description: 'Successfully Logged out', variant: 'success' });
   };

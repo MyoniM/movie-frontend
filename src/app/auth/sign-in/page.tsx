@@ -53,7 +53,7 @@ export default function SignIn() {
   }
 
   return (
-    <div className="h-[calc(94vh)] w-screen flex justify-center items-center">
+    <div className="h-[calc(94vh)] w-full flex justify-center items-center">
       <div className="w-96">
         <CardHeader className="text-center">
           <CardTitle className="text-7xl mb-8">Sign In</CardTitle>

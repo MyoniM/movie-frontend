@@ -34,7 +34,7 @@ export default function RootLayout({
         <body className={poppins.className}>
           <Provider store={store}>
             <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange>
-              <main className="mx-auto max-w-6xl">{children}</main>
+              <main className="mx-auto max-w-7xl">{children}</main>
               <Toaster />
             </ThemeProvider>
           </Provider>

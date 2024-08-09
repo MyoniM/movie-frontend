@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { z } from 'zod';
+import { format } from 'date-fns';
 import { v4 as uuidv4 } from 'uuid';
-import { format, set } from 'date-fns';
 import { useForm } from 'react-hook-form';
 import { CalendarIcon, Loader } from 'lucide-react';
 import { zodResolver } from '@hookform/resolvers/zod';

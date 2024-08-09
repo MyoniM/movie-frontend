@@ -12,7 +12,7 @@ import { useRegisterMutation } from '@/state/services/auth';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
-import { CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 
 const signInSchema = z.object({
@@ -32,9 +32,9 @@ export default function SignIn() {
 
   async function onSubmit(values: z.infer<typeof signInSchema>) {
     try {
-      const response = await register(values).unwrap();
+      await register(values).unwrap();
 
-      toast(response.message);
+      toast({ title: 'Success', description: 'Signed Up Successfully', variant: 'success' });
 
       router.replace('/auth/sign-in');
     } catch (error: any) {
@@ -47,7 +47,7 @@ export default function SignIn() {
   }
 
   return (
-    <div className="h-[calc(94vh)] w-screen flex justify-center items-center">
+    <div className="h-[calc(94vh)] w-full flex justify-center items-center">
       <div className="w-96">
         <CardHeader className="text-center">
           <CardTitle className="text-7xl mb-8">Sign Up</CardTitle>
