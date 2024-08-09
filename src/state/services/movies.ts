@@ -3,7 +3,7 @@ import { api } from './api';
 export const movieApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getMovies: builder.query({
-      query: () => ({ url: `movies/get-all` }),
+      query: ({ page, searchTerm, genre }) => ({ url: `movies/get-all?offset=${page}&query=${searchTerm}&genre=${genre}` }),
       providesTags: ['Movies'],
     }),
     lookupMovies: builder.query({
@@ -39,7 +39,7 @@ export const movieApi = api.injectEndpoints({
 
 export const {
   // queries
-  useGetMoviesQuery,
+  useLazyGetMoviesQuery,
   useLazyLookupMoviesQuery,
   // mutations
   useCreateMovieMutation,

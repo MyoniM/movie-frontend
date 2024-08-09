@@ -287,7 +287,7 @@ export default function AddMovie() {
                     </Button>
                   </Link>
 
-                  <Button type="submit" className="w-full" disabled={isCreatingMovies || isLoading}>
+                  <Button type="submit" className="w-full" disabled={isCreatingMovies || isUpdatingMovies || isLoading}>
                     Submit
                   </Button>
                 </div>
