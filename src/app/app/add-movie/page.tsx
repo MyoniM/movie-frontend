@@ -155,7 +155,7 @@ export default function AddMovie() {
   }
 
   return (
-    <div className="p-10 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-8 h-[calc(94vh)]">
+    <div className="p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 h-[calc(92vh)]">
       <div className="w-full">
         <h1 className="text-xl md:text-3xl">{searchParams.get('movie') ? 'Update movie' : 'Create new movie'}</h1>
 
