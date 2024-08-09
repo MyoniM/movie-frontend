@@ -6,7 +6,7 @@ const config: LooseObject = {
     API_VERSION: '',
   },
   production: {
-    API_URL: '',
+    API_URL: 'https://api.mymovies.store/api',
     API_VERSION: '',
   },
 };
