@@ -120,7 +120,7 @@ export default function Home() {
       )}
 
       {movies.length > 0 && (
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex gap-4 flex-wrap pb-20">
           {movies.map((movie: any, i: number) => (
             <MovieCard
               key={i}

@@ -10,7 +10,7 @@ export interface MovieProps {
   imdbRating: string;
   onSuggestionClick?: ({ Title, Year, Rated, Genre, imdbRating, Poster }: MovieProps) => void;
 }
-
+ 
 function takeFirstGenre(Genre: string) {
   return (Genre || 'N/A').split(',')[0].toUpperCase();
 }
@@ -18,10 +18,10 @@ function takeFirstGenre(Genre: string) {
 export default function MovieCard({ Title, Year, Rated, Genre, imdbRating, Poster, onSuggestionClick }: MovieProps) {
   return (
     <div
-      className="text-left w-48 h-fit cursor-pointer border border-primary/0 hover:border-primary hover:shadow-md transition ease-in-out delay-70 bg-secondary/50 p-1 rounded-sm"
+      className="text-left w-56 h-fit cursor-pointer border border-primary/0 hover:border-primary hover:shadow-md transition ease-in-out delay-70 bg-secondary/50 p-1 rounded-sm"
       onClick={() => onSuggestionClick!({ Title, Year, Rated, Genre: takeFirstGenre(Genre), imdbRating, Poster })}
     >
-      <img src={Poster} alt={Title} className="rounded-sm h-60 w-48 object-fill" />
+      <img src={Poster} alt={Title} className="rounded-sm h-72 w-56 object-fill" />
 
       <h1 className="text-primary text-sm mt-2 overflow-hidden text-nowrap text-ellipsis">{Title}</h1>
 
